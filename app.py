@@ -19,7 +19,7 @@ def perform_query():
     return app.response_class('', content_type="text/plain")
 
 
-def create_app():
+def create_app() -> Flask:
     app = Flask(__name__)
     app.register_blueprint(main_bp)
     return app
